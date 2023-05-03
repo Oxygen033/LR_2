@@ -6,8 +6,8 @@ from aiogram.types import InputFile
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
 def StartBot():
-    API_TOKEN = '6102954233:AAH4pLbFUvNDlr5thb5EFPRLCq3UZRfw-08'
-
+    with open("token.txt", 'r', encoding='utf-8') as f:
+        API_TOKEN = f.readline()
     logging.basicConfig(level=logging.INFO)
 
     bot = Bot(token=API_TOKEN)
